@@ -1,0 +1,24 @@
+# Add your Python code here. E.g.
+from microbit import *
+
+# 2 + 2 == 4
+# "2" + "2" == "22", though.
+# "string 1" + "string 2" == "string 1string 2"
+# notice that there's no spacing between ^ "string 1" and "string 2"
+
+boat = Image("00900:"+\
+             "09590:"+\
+             "09090:"+\
+             "90090:"+\
+             "99099")
+             
+
+boats = [boat]
+
+for number in range(1,6):
+    new_boat = boat.shift_down (number)
+    boats.append(new_boat)
+
+display.show(boat, delay=100)
+
+
